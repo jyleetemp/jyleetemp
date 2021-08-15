@@ -134,3 +134,27 @@ $(document).ready(function() {
     }
   });
 });
+
+$(document).ready(function() {
+  $('input[data-toggle="toggle"]').change(function(){
+    $(this).parents().next('.hide').toggle();
+  });
+
+  $('input[type="checkbox"]').on('change', function() {
+    if ($(this).attr('id')==='previous_news') {
+      if ($(this).is(':checked')) {
+        $(this).parent().find('label').text('Previous news △');
+      } else {
+        $(this).parent().find('label').text('Previous news ▽'); 
+      }             
+    }
+    if ($(this).attr('id')==='domestic_conferences') {
+      if ($(this).is(':checked')) {
+        $(this).parent().find('label').text('Domestic Conferences & Journals △');
+      } else {
+        $(this).parent().find('label').text('Domestic Conferences & Journals ▽'); 
+      }             
+    }
+  });
+
+});

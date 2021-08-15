@@ -33,6 +33,10 @@
   (primary, $primary-color),
   (inverse, #fff),
   (light-outline, transparent),
+  (blue-outline, transparent),
+  (etc-outline, transparent),
+  (demo-outline, transparent),
+  (code-outline, transparent),
   (success, $success-color),
   (warning, $warning-color),
   (danger, $danger-color),
@@ -50,7 +54,18 @@
       @if ($buttoncolor == light-outline) {
         border: 1px solid #fff;
       }
-
+      @if ($buttoncolor == blue-outline) {
+        border: 1px solid #3185FC;
+      }
+      @if ($buttoncolor == etc-outline) {
+        border: 1px solid #B4B6F6;
+      }
+      @if ($buttoncolor == demo-outline) {
+        border: 1px solid #9E86D5;
+      }
+      @if ($buttoncolor == code-outline) {
+        border: 1px solid #624CAB;
+        
       &:visited {
         @include yiq-contrasted($color);
       }
